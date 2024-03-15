@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css">
+</head>  
+   <style>
+     .ui.container {
+	    margin-top:2em;
+	  }
+	  
+	  #correct {
+	    display:none;
+	  }
+	  </style>
+
+    <title>Number Guessing Game</title>
+  </head>
+  <body>
+  <div class = "ui  grid container">
+  <div class="ui sixteen wide center aligned  column  segment">
+     <h1>Guess My Number!</h1>
+	 </div>
+	<div class="ui sixteen wide clearing column segment">
+  <h3 class="ui left floated header">
+    <button class="ui blue button" id="again">Play Again!</button>
+  </h3>
+
+  <h3 class="ui right floated header">
+   (Between 1 and 10)
+  </h3>
+</div>
+    
+	<main class="ui two column row">
+  <div class="column">
+    <div class="ui segment">
+	   <form class = "ui form">
+	     <div class="field">
+      <label>Number</label>
+         <input type="number" min = "1" max = "10"  id="guess" name = "guess" autofocus required 
+		        title="Please enter a number between 1 and 10">
+	   </div>
+       <button class="ui orange button" type="submit"> Check!</button>
+	   </form>
+    </div>
+  </div>
+  <div class="column">
+    <div class="ui segment">
+      <p class ="ui message" id = "message">Start guessing...</p>
+      <p>💯 Score: <span id="score">0</span></p>
+      <p>
+          🥇 Fastest score: <span id="bestscore">0</span>
+      </p>
+    </div>
+	</div>
+	<div class="ui sixteen wide center aligned  column  segment" id = "correct">
+	<i class="circular inverted huge green checkmark icon"></i>
+	</div>
+  </main>
+</div>
+
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" 
+  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" 
+  crossorigin="anonymous">
+ </script>
+ <script  src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>   
+    <script src="js/script.js"></script>
+  </body>
+</html>
