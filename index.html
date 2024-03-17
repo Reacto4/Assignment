@@ -12,31 +12,59 @@
 	  #correct {
 	    display:none;
 	  }
+
+    body {
+      background-color: gainsboro;
+    }
 	  </style>
 
     <title>Number Guessing Game</title>
   </head>
   <body>
   <div class = "ui  grid container">
-  <div class="ui sixteen wide center aligned  column  segment">
+  <div class="ui sixteen wide teal center aligned  column  segment">
      <h1>Guess My Number!</h1>
+     <div class="ui column centered grid">
+     <div class="ui form">
+      <div class="field">
+        <label>Enter your name</label>
+        <input type="text" id="sbmtName">
+      </div>
+      <div class="ui submit button" id="sub">Submit</div>
 	 </div>
-	<div class="ui sixteen wide clearing column segment">
+  </div>
+  </div>
+
+	<div class="ui sixteen wide olive clearing column segment">
   <h3 class="ui left floated header">
     <button class="ui blue button" id="again">Play Again!</button>
   </h3>
-
-  <h3 class="ui right floated header">
-   (Between 1 and 10)
+  <h3 class="ui left floated header">
+    <button class="ui red button" id="end">End game, store score</button>
   </h3>
+ 
+  
+
+  <div class="ui right floated header">
+    <table class="ui very basic collapsing celled table" id="scoreTable">
+      <thead>
+        <tr><th>Player</th>
+        <th>Guesses</th>
+      </tr></thead>
+      <tbody>
+        
+      </tbody>
+    </table>
+  </div>
 </div>
+
     
 	<main class="ui two column row">
   <div class="column">
     <div class="ui segment">
 	   <form class = "ui form">
 	     <div class="field">
-      <label>Number</label>
+      <label>Number beetween 1 - 10</label>
          <input type="number" min = "1" max = "10"  id="guess" name = "guess" autofocus required 
 		        title="Please enter a number between 1 and 10">
 	   </div>
@@ -53,10 +81,14 @@
       </p>
     </div>
 	</div>
-	<div class="ui sixteen wide center aligned  column  segment" id = "correct">
+</main>
+	<div class="ui sixteen wide center aligned column  segment" id = "correct">
 	<i class="circular inverted huge green checkmark icon"></i>
+  <div>
+  <img src="minions.gif">
+  </div>
 	</div>
-  </main>
+  
 </div>
 
   <script src="https://code.jquery.com/jquery-3.6.1.min.js" 
