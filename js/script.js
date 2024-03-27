@@ -20,7 +20,7 @@ const againBtn = document.querySelector("#again");
 const correct = document.querySelector("#correct");
 const submitBtn = document.querySelector("[type='submit']");
 
-let num = Math.floor((Math.random() * 10) +1); //generates numb between 1-10
+num = Math.floor((Math.random() * 10) +1); //generates numb between 1-10
 
 // form for name input
 
@@ -69,7 +69,7 @@ form.addEventListener('submit', (evt) => {
 
 againBtn.addEventListener('click', (evt) => {
 
-    let num = Math.floor((Math.random() * 10) +1);
+    num = Math.floor((Math.random() * 10) +1);
     console.log('New random ' + num);
     guessCount = 0;
     guessInput.value = "";
