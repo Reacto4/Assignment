@@ -13,6 +13,17 @@
 	    display:none;
 	  }
 
+    #warning{
+      visibility: hidden;
+      margin: auto;
+      width: 100%;
+      }
+
+    #nameHide {
+      display: none;
+      margin-top: 1em;	
+      }
+
     body {
       background-color: gainsboro;
     }
@@ -24,8 +35,10 @@
   <div class = "ui  grid container">
   <div class="ui sixteen wide teal center aligned  column  segment">
      <h1>Guess My Number!</h1>
-     <div class="ui column centered grid">
-     <div class="ui form">
+     <button id="btn1">Add your name</button>
+     <div class="ui column centered grid" >
+      
+     <div class="ui form" id="nameHide">
       <div class="field">
         <label>Enter your name</label>
         <input type="text" id="sbmtName">
@@ -35,43 +48,32 @@
   </div>
   </div>
 
-	<div class="ui sixteen wide olive clearing column segment">
-  <h3 class="ui left floated header">
-    <button class="ui blue button" id="again">Play Again!</button>
-  </h3>
-  <h3 class="ui left floated header">
-    <button class="ui red button" id="end">End game, store score</button>
-  </h3>
- 
-  
-
-  <div class="ui right floated header">
-    <table class="ui very basic collapsing celled table" id="scoreTable">
-      <thead>
-        <tr><th>Player</th>
-        <th>Guesses</th>
-      </tr></thead>
-      <tbody>
-        
-      </tbody>
-    </table>
-  </div>
-</div>
-
-    
-	<main class="ui two column row">
+	<main class="ui three column row">
   <div class="column">
     <div class="ui segment">
+      <div class="ui ten item borderless menu">
+        <a class="item" id="1">1</a>
+        <a class="item" id="2">2</a>
+        <a class="item" id="3">3</a>
+        <a class="item" id="4">4</a>
+        <a class="item" id="5">5</a>
+        <a class="item" id="6">6</a>
+        <a class="item" id="7">7</a>
+        <a class="item" id="8">8</a>
+        <a class="item" id="9">9</a>
+        <a class="item" id="10">10</a>
+      </div>
 	   <form class = "ui form">
 	     <div class="field">
       <label>Number beetween 1 - 10</label>
          <input type="number" min = "1" max = "10"  id="guess" name = "guess" autofocus required 
 		        title="Please enter a number between 1 and 10">
 	   </div>
-       <button class="ui orange button" type="submit"> Check!</button>
-	   </form>
+       <button class="ui orange button" type="submit"> Check!</button> 
+	   </form>   
     </div>
   </div>
+
   <div class="column">
     <div class="ui segment">
       <p class ="ui message" id = "message">Start guessing...</p>
@@ -80,7 +82,33 @@
           🥇 Fastest score: <span id="bestscore">0</span>
       </p>
     </div>
+    <h3 class="ui right floated header">
+      <button class="ui blue button" id="again">Play Again!</button>
+    </h3>
+    <h3 class="ui right floated header">
+      <button class="ui red button" id="end">End game, store score</button>
+    </h3>
+    <div class="ui yellow circular label" id="warning"> </div>
 	</div>
+
+  <div class="olive column">
+
+          <!--<div class="ui floated header">-->
+            <table class="ui inverted orange table" id="scoreTable">
+              <thead>
+                <tr>
+                  <th>Player</th>
+                  <th>Guesses</th>
+                  <th>Time stored</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+              </tbody>
+            </table>
+          <!--</div>-->
+  </div>
+
 </main>
 	<div class="ui sixteen wide center aligned column  segment" id = "correct">
 	<i class="circular inverted huge green checkmark icon"></i>
@@ -91,11 +119,15 @@
   
 </div>
 
+
   <script src="https://code.jquery.com/jquery-3.6.1.min.js" 
   integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" 
   crossorigin="anonymous">
  </script>
  <script  src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>   
     <script src="js/script.js"></script>
+
+    
+    
   </body>
 </html>
