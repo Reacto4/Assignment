@@ -20,7 +20,7 @@ const againBtn = document.querySelector("#again");
 const correct = document.querySelector("#correct");
 const submitBtn = document.querySelector("[type='submit']");
 
-num = Math.floor((Math.random() * 10) +1); //generates numb between 1-10
+let num = Math.floor((Math.random() * 10) +1); //generates numb between 1-10
 
 // form for name input
 
