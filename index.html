@@ -27,7 +27,41 @@
     body {
       background-color: gainsboro;
     }
-	  </style>
+   
+   
+  .column.left{
+  animation: move 3s ;
+}
+
+.olive.column.right{
+  animation: rotate 3s ;
+  animation-delay: 3s;
+}
+
+@keyframes move {
+      0% {
+            transform: translateX(-100%);
+            opacity: 0;
+          }
+          100% {
+            transform: translateX(0);
+            opacity: 1;
+          }
+      }
+
+@keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+        opacity: 0;
+      }
+      
+      100% {
+        transform: rotate(360deg);
+        opacity: 1;
+      }
+    }
+	   
+   </style>
 
     <title>Number Guessing Game</title>
   </head>
